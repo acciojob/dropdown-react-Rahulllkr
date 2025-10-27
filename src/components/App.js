@@ -143,7 +143,33 @@ function App()
 	// Do not alter/remove main div
 	return (
 	<div id="main">
-		
+		<select id="state">
+			<div id="state-name">
+				{
+					states.map((item,index) => {
+						return <option value={index}>{item.name}</option>
+					})
+				}
+			</div>
+		</select>
+		<select id="city">
+			<div id="city-name">
+				{
+					states.map((item,index) => {
+						return <option value={index}>{item.city.name}</option>
+					})
+				}
+			</div>	
+		</select>
+		<select id="landmark">
+			<div id="state-name">
+				{
+					states.map((item,index) => {
+						return <option value={index}>{item.name}</option>
+					})
+				}
+			</div>
+		</select>
 	</div>
 	);
 }
