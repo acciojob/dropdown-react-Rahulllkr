@@ -189,7 +189,7 @@ function App(){
 			</select>
 		</div>
 
-		<div id="state-name">{selectedState.name}</div>
+		<div id="state-title">{selectedState.name}</div>
 		<div id="state-description">{selectedState.description}</div>
 		
 
