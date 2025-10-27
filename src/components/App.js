@@ -1,4 +1,4 @@
-import React, { useState,useReducer } from "react";
+import React, { useState,useReducer, useEffect } from "react";
 import "./../styles/App.css";
 
 
@@ -145,7 +145,16 @@ function App(){
 
 	const selectedState = states[stateIndex];
 	const selectedCity = selectedState.city[cityIndex];
-	const selectedLandmark = selectedCity.landmarks[landmarkIndex]
+	const selectedLandmark = selectedCity.landmarks[landmarkIndex];
+
+	useEffect(() => {
+		setCityIndex(0);
+		setLandmarkIndex(0)
+	},[stateIndex]);
+
+	useEffect(() => {
+		setLandmarkIndex(0)
+	},[cityIndex])
 	// Do not alter/remove main div
 	return (
 	<div id="main">
