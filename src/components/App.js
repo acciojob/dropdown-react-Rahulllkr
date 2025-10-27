@@ -159,6 +159,39 @@ function App(){
 	return (
 	<div id="main">
 
+		<div>
+			<select id="state" value={stateIndex} onChange={(e) => setStateIndex(Number(e.target.value))}>
+				{
+					states.map((s,i) => (
+						<option key={i} value={i}>{s.name}</option>
+					))
+				}
+			</select>
+		</div>
+
+		<div>
+			<select id="city" value={cityIndex} onChange={(e) => setCityIndex(Number(e.target.value))}>
+				{
+					selectedState.city.map((c,i) => (
+						<option key={i} value={i}>{c.name}</option>
+					))
+				}
+			</select>
+		</div>
+
+		<div>
+			<select id="landmark" value={landmarkIndex} onChange={(e) => setLandmarkIndex(Number(e.target.value))}>
+				{
+					selectedCity.landmarks.map((l,i) => (
+						<option key={i} value={i}>{l.name}</option>
+					))
+				}
+			</select>
+		</div>
+
+		<div>
+			
+		</div>
 	</div>
 	);
 }
