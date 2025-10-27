@@ -138,23 +138,18 @@ const states = [{
 }];
 
 
-function App() 
-{
+function App(){
+	const [stateIndex,setStateIndex] = useState(0);
+	const [cityIndex,setCityIndex] = useState(0)
+	const [landmarkIndex,setLandmarkIndex] = useState(0);
+
+	const selectedState = states[stateIndex];
+	const selectedCity = selectedState.city[cityIndex];
+	const selectedLandmark = selectedCity.landmarks[landmarkIndex]
 	// Do not alter/remove main div
 	return (
 	<div id="main">
-		<div id="state-name">
-		<select id="state">
-			
-				{
-					states.map((item,index) => {
-						return <option value={index}>{item.name}</option>
-					})
-				}
-			
-		</select>
-		</div>
-						
+
 	</div>
 	);
 }
