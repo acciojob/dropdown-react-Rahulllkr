@@ -194,8 +194,14 @@ function App(){
 			<div id="state-description">{selectedState.description}</div>
 		</div>
 
-		<div>
-			
+		<div id="city-name">
+			<h3>City: {selectedCity.name}</h3>
+			<div id="city-description">{selectedCity.description}</div>
+		</div>
+
+		<div id="landmark-name">
+			<h3>Landmark: {selectedLandmark.name}</h3>
+			<div id="landmark-description">{selectedLandmark.description}</div>
 		</div>
 	</div>
 	);
