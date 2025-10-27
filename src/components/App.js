@@ -154,24 +154,7 @@ function App()
 			
 		</select>
 		</div>
-			<div id="city-name">
-		<select id="city">
-				{
-					states.map((item,index) => {
-						return <option value={index}>{item.city.name}</option>
-					})
-				}
-		</select>
-			</div>	
-		{/* <select id="landmark">
-			<div id="landmark-name">
-				{
-					states.map((item,index) => {
-						return <option value={index}>{item.city.name.landmark.description}</option>
-					})
-				}
-			</div>
-		</select> */}
+						
 	</div>
 	);
 }
