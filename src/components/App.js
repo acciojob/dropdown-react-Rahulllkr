@@ -189,6 +189,11 @@ function App(){
 			</select>
 		</div>
 
+		<div id="state-name">
+			<h3>State : {selectedState.name}</h3>
+			<div id="state-description">{selectedState.description}</div>
+		</div>
+
 		<div>
 			
 		</div>
