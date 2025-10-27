@@ -15,19 +15,19 @@ const states = [
           {
             name: "Mhow",
             description:
-              "Dr. Ambedkar Nagar, commonly known as Mhow, is a cantonment in the Indore district in Madhya Pradesh state of India. It is located 23 kilometres south-west of Indore city, towards Mumbai on the old Mumbai-Agra Road.",
+              "Dr. Ambedkar Nagar, commonly known as Mhow, is a cantonment in the Indore district in Madhya Pradesh state of India.",
           },
           {
             name: "Dewas",
             description:
-              "Dewas is a city in the Malwa region of the Indian state of Madhya Pradesh. The municipality was formerly the seat of two princely states during the British Raj, Dewas Junior state and Dewas Senior state, ruled by the Puar clan of Maratha.",
+              "Dewas is a city in the Malwa region of the Indian state of Madhya Pradesh.",
           },
         ],
       },
       {
         name: "Bhopal",
         description:
-          "Bhopal is a city in the central Indian state of Madhya Pradesh. It's one of India's greenest cities. There are two main lakes, the Upper Lake and the Lower Lake.",
+          "Bhopal is a city in the central Indian state of Madhya Pradesh. It's one of India's greenest cities.",
         landmarks: [
           {
             name: "MANIT",
@@ -46,7 +46,7 @@ const states = [
   {
     name: "Jharkhand",
     description:
-      "Jharkhand is a state in eastern India. It's known for its waterfalls, the elegant Jain temples of Parasnath Hill and the elephants and tigers of Betla National Park.",
+      "Jharkhand is a state in eastern India. It's known for its waterfalls, the elegant Jain temples of Parasnath Hill and Betla National Park.",
     city: [
       {
         name: "Dhanbad",
@@ -125,14 +125,14 @@ function App() {
         ))}
       </select>
 
-      {/* Match test IDs exactly */}
-      <div id="state-name">{selectedState?.name}</div>
+      {/* ✅ Use 'title' IDs because Cypress expects them */}
+      <div id="state-title">{selectedState?.name}</div>
       <div id="state-description">{selectedState?.description}</div>
 
-      <div id="city-name">{selectedCity?.name}</div>
+      <div id="city-title">{selectedCity?.name}</div>
       <div id="city-description">{selectedCity?.description}</div>
 
-      <div id="landmark-name">{selectedLandmark?.name}</div>
+      <div id="landmark-title">{selectedLandmark?.name}</div>
       <div id="landmark-description">{selectedLandmark?.description}</div>
     </div>
   );
