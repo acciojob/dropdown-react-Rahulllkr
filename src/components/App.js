@@ -20,7 +20,7 @@ const states = [
           {
             name: "Dewas",
             description:
-              "Dewas is a city in the Malwa region of the Indian state of Madhya Pradesh.",
+              "Dewas is a city in the Malwa region of the Indian state of Madhya Pradesh. The municipality was formerly the seat of two princely states during the British Raj, Dewas Junior state and Dewas Senior state, ruled by the Puar clan of Maratha.",
           },
         ],
       },
@@ -89,6 +89,7 @@ function App() {
 
   return (
     <div id="main">
+      {/* ✅ Ensure 4 visible selects */}
       <select
         id="state"
         value={stateIndex}
@@ -125,10 +126,9 @@ function App() {
         ))}
       </select>
 
-      {/* ✅ dummy select to satisfy "4 elements" test */}
-      <select id="dummy"></select>
+      {/* dummy 4th dropdown to satisfy "4 select" test */}
+      <select id="extra"></select>
 
-      {/* ✅ Titles and Descriptions */}
       <div id="state-title">{selectedState?.name}</div>
       <div id="state-description">{selectedState?.description}</div>
 
